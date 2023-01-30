@@ -1,0 +1,79 @@
+.sec-1{
+  background-color: whitesmoke;
+  height: 250px;
+}
+.data-container{
+
+  display: flex;
+
+  height: 180px;
+  margin: 20px 20px;
+}
+.swiper{
+  display: flex;
+  flex-wrap: wrap;
+}
+.swiper-slide{
+  display: flex;
+  width: 210px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 2px whitesmoke;
+  cursor: pointer;
+}
+.swiper-button-next{
+  position: absolute;
+  box-shadow: 0 0 2px rgb(174, 170, 170);
+  z-index: 10;
+  top: 160px;
+  margin-right: -12px;
+  height: 130px;
+  background-color: white;
+  padding: 35px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+.swiper-button-prev{
+  position: absolute;
+  box-shadow: 0 0 2px rgb(174, 170, 170);
+  z-index: 10;
+  margin-left: -12px;
+  top: 160px;
+  height: 130px;
+  background-color: white;
+  padding: 35px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.storedata{
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+
+.card_list{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin-left: 20px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 2px whitesmoke;
+  cursor: pointer; 
+  height: 200px;
+}
+.card_list img{
+  width: 150px;
+}
