@@ -22,7 +22,6 @@ var lastIndex = 20;
 
 $.getJSON("data.json", function (data) {
   const storeData = data.stores;
-  console.log(data);
   getCategoryList(categoriesData);
   getStoreList(storeData, lastIndex);
   paginator(storeData);
