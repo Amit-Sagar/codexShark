@@ -1,0 +1,38 @@
+.cardContent {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  margin: 30px auto;
+}
+.cardContent .userContainer {
+  width: 91%;
+}
+.cardContent .userContainer .todo_style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.cardContent .userContainer .userList {
+  width: 100%;
+  padding-left: 0px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #8566aa;
+  text-transform: capitalize;
+}
+.cardContent .userContainer .userList:hover {
+  background: rgb(245, 227, 227);
+  border-radius: 6px;
+}
+.cardContent .userContainer .fa-trash-can {
+  color: green;
+}
+.cardContent .userContainer .fa-trash-can:hover {
+  color: red;
+}/*# sourceMappingURL=userItem.css.map */

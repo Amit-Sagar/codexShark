@@ -11,3 +11,8 @@
   box-shadow: 0 0 2px whitesmoke;
   cursor: pointer;
 }
+@media (max-width:450px){
+  .card{
+    width: 65%;
+  }
+}

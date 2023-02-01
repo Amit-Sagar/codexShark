@@ -1,0 +1,29 @@
+@mixin commonCode($width, $dir)
+  display: flex
+  flex-direction: $dir
+  width: $width
+
+.container 
+  @include commonCode(60%, row)
+  height: 30vh
+  align-items: center
+  margin: 30px auto 0
+  justify-items: center
+
+  .chidContainer
+   @include commonCode(70%, row)
+    margin: 0 auto
+
+    .input 
+      margin: 2rem
+      width: 50%
+      border: none
+      border-bottom: 2px solid #8566aa
+
+      &:focus 
+        outline: none
+
+@media(max-width:1000px)
+  .chidContainer
+    display: flex
+    flex-direction: column

@@ -34,13 +34,45 @@ const Slider = () => {
         <Swiper
           modules={[Navigation]}
           spaceBetween={30}
-          slidesPerView={6}
-          slidesPerGroup={6}
           navigation
           loop={true}
-          loopFillGroupWithBlank={true}
-          // scrollbar={{ draggable: true }}
-
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              loopFillGroupWithBlank:true
+            },
+            450: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              slidesPerGroup: 2,
+              loopFillGroupWithBlank:true
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              slidesPerGroup: 3,
+              loopFillGroupWithBlank:true
+            },
+            850: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+              slidesPerGroup: 4,
+              loopFillGroupWithBlank:true
+            },
+            1100: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+              slidesPerGroup: 5,
+              loopFillGroupWithBlank:true
+            },
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 50,
+              slidesPerGroup: 6,
+              loopFillGroupWithBlank:true
+            },
+          }}
           className={styles.sliderCard}
         >
           {categoriesData.map((item, index) => {
