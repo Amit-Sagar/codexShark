@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { stores } from "./store/data";
+import React from "react";
 
 const Header = ({onSetInput, setSearchInput}) => {
     const searchHandler = (e) => {
@@ -13,14 +12,13 @@ const Header = ({onSetInput, setSearchInput}) => {
         <form className="d-flex" role="search">
           <input
             className="form-control me-2"
-            // value={inputValue}
             id="myInput"
             type="search"
             placeholder="Search"
             aria-label="Search"
             onChange={searchHandler}
           />
-          <button className="" >
+          <button className="button" >
             Search
           </button>
         </form>

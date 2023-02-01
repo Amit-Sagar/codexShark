@@ -8,7 +8,7 @@
 }
 
 main{
-  background-color: whitesmoke;
+  background-color: rgb(206, 204, 204);
 }
 .swiper-button-prev:after{
   font-size: 20px !important;
@@ -39,4 +39,25 @@ main{
   padding: 35px 15px;
   cursor: pointer;
   border-radius: 5px;
+}
+.button{
+  background-color: rgb(13, 192, 13);
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 7px 20px;
+  font-weight: 200;
+  color: white;
+}
+.button:hover, .button:active{
+  background-color: rgb(5, 163, 5);
+}
+.button:active{
+  transform: scale(0.9);
+}
+@media(max-width:450px){
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+}
 }

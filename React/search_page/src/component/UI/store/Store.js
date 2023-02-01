@@ -9,13 +9,13 @@ const Store = ({ inputValue, searchInput }) => {
   const [loading, setLoading] = useState(true);
   const newData = !!inputValue
     ? stores
-        .filter((item) => item.merchant.includes(inputValue))
+        .filter((item) => item.merchant.toLowerCase().includes(inputValue))
         .slice(page.startPoint, page.endPoint)
     : stores.slice(page.startPoint, page.endPoint);
 
   const handleInfiniteScroll = () => {
     if (
-      window.scrollY + window.innerHeight >=
+      window.scrollY + window.innerHeight + 1>=
       document.documentElement.scrollHeight
     ) {
       setLoading(true);
@@ -24,7 +24,7 @@ const Store = ({ inputValue, searchInput }) => {
         startPoint: 0,
         endPoint: end,
       });
-      setLoading(false)
+      setLoading(false);
     }
   };
   useEffect(() => {
@@ -48,7 +48,7 @@ const Store = ({ inputValue, searchInput }) => {
             );
           })}
           </>
-          :<p>No result found</p>
+          :<h3>No result found</h3>
         }
         </div>
         {loading && <h5 className={classes.loader}>Loading...</h5>}
