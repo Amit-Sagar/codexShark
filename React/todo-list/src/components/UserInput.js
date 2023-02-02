@@ -5,12 +5,12 @@ import Card from "./Card";
 import "../sass/userInput.css";
 
 const UserInput = (props) => {
-  const [userInput, setUserInput] = useState("");
+  // const [userInput, setUserInput] = useState("");
 
   const addData = () => {
     {
-      userInput && props.onAddItem(userInput);
-      setUserInput("");
+      props.userInput && props.onAddItem(props.userInput);
+      props.onSetUserInput("");
     }
   };
   return (
@@ -21,9 +21,9 @@ const UserInput = (props) => {
           type="text"
           placeholder="Add work here..."
           onChange={(e) => {
-            setUserInput(e.target.value);
+            props.onSetUserInput(e.target.value);
           }}
-          value={userInput}
+          value={props.userInput}
         />
         <Button onClick={addData}>Add</Button>
       </div>

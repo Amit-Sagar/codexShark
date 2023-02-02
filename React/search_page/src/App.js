@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './component/UI/header';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"

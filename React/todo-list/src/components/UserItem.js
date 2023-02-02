@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "./Card";
 import "../sass/userItem.css";
 
@@ -6,6 +6,7 @@ const UserItem = (props) => {
   const delItem = (index) => {
     props.onDelItem(index);
   }
+  
   return (
     <Card className="cardContent">
       <ul className="userContainer">
