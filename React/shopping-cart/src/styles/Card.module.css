@@ -1,0 +1,45 @@
+.container{
+  width: 90%;
+  margin: 20px auto;
+}
+.card_container{
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-gap: 40px;
+  background-color: whitesmoke;
+}
+
+.cards{
+  /* width: 250px; */
+  height: 150px;
+  padding: 20px;
+  /* background-image: linear-gradient(to right, #947C23, #AD8D13, #E3B917); */
+  border-radius: 6px;
+}
+.cards:hover{
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.card_type{
+  height: 120px;
+}
+.title{
+  font-weight: bold;
+  font-size: 20px;
+  /* height: 84px; */
+}
+.price{
+  color: black;
+  margin-top: 10px;
+}
+.button{
+  padding: 8px 10px;
+  border: none;
+  font-weight: bold;
+  background-color: #EAB300;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:active{
+  transform: scale(0.9);
+}

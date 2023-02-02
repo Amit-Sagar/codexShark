@@ -6,13 +6,15 @@ import UserItem from "./components/UserItem";
 import "./sass/main.css";
 
 const App = () => {
+  const [userInput, setUserInput] = useState("");
   const [userItem, setUserItem] = useState([]);
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
   const addItem = (item) => {
-    setUserItem((prevItem) => {
-      return [...prevItem, item];
-    });
+    setUserItem([...userItem, userInput])
+    // setUserItem((prevItem) => {
+    //   return [...prevItem, item];
+    // });
   };
 
   const deletList = (i) => {
@@ -25,17 +27,18 @@ const App = () => {
   };
 
   useEffect(()=>{
-    addItem()
-    // setData(userItem);
-   },[])
+    // addItem()
+    setUserItem(userItem);
+   },[userItem])
 
-console.log(data)
+// console.log(data)
   return (
     <div className="rootContainer">
-      <UserInput onAddItem={addItem} />
-      {userItem.length && (
+      <UserInput onAddItem={addItem} userInput={userInput} onSetUserInput={setUserInput}/>
+      {userItem.length ?
         <UserItem userItem={userItem} onDelItem={deletList} />
-      )}
+        :""
+      }
       <Button className="rootButton" onClick={deleteAll}>
         Clear
       </Button>
