@@ -1,63 +1,29 @@
 import React from "react";
 import styles from "../styles/Navbar.module.css";
-const Navbar = ({ size, onSetShow, onSetUserInput }) => {
-  const searchHandler = (e) => onSetUserInput(e.target.value);
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
+
+const Navbar = () => {
+  const items = useSelector((state) => state.cart);
 
   return (
-    <nav>
-      <div className={styles.nav_box}>
-        <span className={styles.my_shop} onClick={() => onSetShow(true)}>
-          Lets's Shopping
-        </span>
+    <nav className="flex justify-between items-center bg-orange-400">
+      <div className="ml-10">
+        <span>Let's Shopping</span>
+        <Link to="/" className="navLink">
+          Home
+        </Link>
       </div>
-      <div className={styles.users}>
-        <input
-          className="form-control me-2"
-          id="myInput"
-          type="search"
-          placeholder="Search..."
-          aria-label="Search"
-          onChange={searchHandler}
-        />
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton2"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul
-            className="dropdown-menu dropdown-menu-dark"
-            aria-labelledby="dropdownMenuButton2"
-          >
-            <li></li>
-            {/* <li>
-              <a className="dropdown-item active" href="#">
-                Action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </li> */}
-          </ul>
-        </div>
-      </div>
-      <div className={styles.carts} onClick={() => onSetShow(false)}>
-        <span>
+      <div className="flex mr-44 h-8 self-center">
+      
+        <Link to="/cart1" className="navLink self-center">
+          <span>Cart </span>
           <i className="fa-solid fa-cart-shopping"></i>
-        </span>
-        <span className={styles.size}>{size}</span>
+        </Link>
+        <span>{items.length}</span>  
       </div>
+      
     </nav>
   );
 };

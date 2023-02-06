@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Cart.module.css";
+import styles from "../../styles/Cart.module.css";
 const Price_Item = ({ cart, totalPrice }) => {
   return (
     <table className={styles.right_container}>
