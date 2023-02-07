@@ -11,7 +11,7 @@
 }
 .card_container{
   display: grid;
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(3, 360px);
   grid-gap: 40px;
   /* background-color: whitesmoke; */
   justify-content: center;
@@ -19,21 +19,29 @@
 }
 
 .cards{
+  height: 550px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* background-color: gray; */
+}
+.cards:hover{
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.cards img {
+  /* width: 300px;
+  height: 250px; */
+  object-fit:cover;
+}
+.skeletonCards{
   height: 350px;
   padding: 10px;
   border-radius: 6px;
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: gray;
-}
-.cards:hover{
-  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
-}
-.cards img {
-  width: 300px;
-  height: 120px;
 }
 .price{
   color: black;

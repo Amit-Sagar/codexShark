@@ -1,56 +1,10 @@
-.cartCard {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  margin-bottom: 20px;
-  padding: 14px;
-  border-radius: 5px;
+.btn{
+  height: 50px;
+   background-color: rgb(3, 3, 74);
+   color: white;
+   margin-top: 14px;
 }
-
-
-/* .container{
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 20px auto;
+.btn1{
+  width: 50px;
+  text-align: center;
 }
-.left_container{
-  width: 55%;
-  height: fit-content;
-  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  border-radius: 5px;
-}
-.right_container{
-  width: 30%;
-  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  height: 300px;
-}
-.content img {
-  width: 300px;
-  height: 200px;
-}
-.price{
-  font-size: 20px;
-  font-weight: 600;
-}
-.button{
-  display: flex;
-  width: 80%;
- justify-content: space-between; 
-}
-.container > h1 {
-  margin-top: 100px;
-}
-.btnContainer{
-  display: flex;
-  justify-content: space-evenly;
-  width: 30%;
-}
-.quantAndPrice{
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-} */

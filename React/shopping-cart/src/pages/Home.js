@@ -6,7 +6,7 @@ const Home = () => {
   return (
 
     <main>
-      <section className='bg-slate-700'>
+      <section className='bg-slate-100'>
         <SearchItem/>
         <Main/>
       </section>
