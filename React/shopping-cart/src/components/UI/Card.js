@@ -15,6 +15,7 @@ const Card = ({ item }) => {
       quantity: 1,
       rating: item.rating,
       totalPrice: item.price,
+      category: item.category,
     };
     dispatch(add(itemData));
   };

@@ -12,7 +12,15 @@ const productSlice = createSlice({
         data: [],
         status: STATUSES.IDLE,
     },
-    reducers:{},
+    reducers:{
+        searchData: (state, action) => {
+            const inputData = action.payload;
+            if(!! inputData){
+            const getData = state.data.filter((item) => item.category.toLowerCase().includes(inputData))
+            state.data = getData;
+            }
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchProducts.pending, (state, action) => {
@@ -28,12 +36,17 @@ const productSlice = createSlice({
     },
 });
 
-export const { loadData, setProducts, setStatus } = productSlice.actions;
+export const { loadData, setProducts, setStatus, searchData } = productSlice.actions;
 export default productSlice.reducer;
 
 // Thunks
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-    const res = await fetch('https://fakestoreapi.com/products');
+    const res = await fetch(`https://fakestoreapi.com/products`);
     const data = await res.json();
     return data;
 });
+// export const fetchSearchProducts = createAsyncThunk('searchProducts/fetch', async () => {
+//     const res = await fetch(`https://fakestoreapi.com/products/category/jewelery`);
+//     const data = await res.json();
+//     return data;
+// });
