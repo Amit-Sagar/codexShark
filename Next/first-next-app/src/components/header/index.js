@@ -16,6 +16,9 @@ const Header = () => {
       <Link href="/todo">
         <h1>My Todo</h1>
       </Link>
+      <Link href="/meetup">
+        <h1>Meetup</h1>
+      </Link>
     </header>
   );
 };
