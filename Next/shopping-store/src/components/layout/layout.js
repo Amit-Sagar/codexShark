@@ -1,13 +1,15 @@
+import store from "@/src/store/store";
+import { Provider } from "react-redux";
 import Footer from "./Footer";
 import Header from "./Header";
 
 function Layout(props) {
   return (
-    <div>
+    <Provider store={store}>
       <Header />
-      <main className="w-11/12 my-12 mx-auto">{props.children}</main>
+      <main className="mx-auto my-12">{props.children}</main>
       <Footer />
-    </div>
+    </Provider>
   );
 }
 
