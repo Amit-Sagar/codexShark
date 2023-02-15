@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
-
+import HomeMain from "@/src/components/home";
+// category
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ result }) {
   return (
     <>
       <Head>
@@ -14,6 +13,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <HomeMain result={result} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch(`https://fakestoreapi.com/products`);
+  const result = await response.json();
+  console.log(result);
+
+  return {
+    props: { result },
+  };
 }

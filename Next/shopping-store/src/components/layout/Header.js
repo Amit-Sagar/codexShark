@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const items = useSelector((state) => state.cart);
   return (
-    <div className="flex flex-col md:flex-row md:justify-start justify-center items-center space-x-5">
+    <div className="flex flex-col md:flex-row md:justify-start justify-center items-center space-x-20 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400 p-4">
       <div className="flex md:ml-10 items-center mt-2">
         <div>
           <svg
@@ -29,7 +31,7 @@ const Header = () => {
       <div className="mt-2">
         <ul className="flex items-center space-x-2 font-medium">
           <Link href={"/"}>
-            <li>Tshirts</li>
+            <li>Home</li>
           </Link>
           <Link href={"/"}>
             <li>Hoodies</li>
@@ -42,9 +44,21 @@ const Header = () => {
           </Link>
         </ul>
       </div>
+      <div className="flex justify-evenly w-[40%] mt-2 bg-slate-300 rounded-2xl">
+        <input
+          type="search"
+          className="text-black  rounded-lg py-2 px-8 text-lg w-full h-10 outline-none"
+          placeholder="search..."
+        />
+        <button type="submit" className="py-0 px-2 cursor-pointer h-10">
+          <AiOutlineSearch />
+        </button>
+      </div>
       <div className="flex absolute right-5 top-3 h-[40px]">
-        <AiOutlineShoppingCart className="text-2xl md:text-3xl cursor-pointer" />
-        <span className="mt-[-8px]">0</span>
+        <Link href={"/cart-page"}>
+          <AiOutlineShoppingCart className="text-2xl md:text-3xl cursor-pointer" />
+        </Link>
+        <span className="mt-[-8px]">{items.length}</span>
       </div>
     </div>
   );
