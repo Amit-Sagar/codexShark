@@ -4,10 +4,10 @@ import CoinTable from "../components/Home/coin-table/CoinTable";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="banner">
       <Banner />
       <CoinTable />
-    </>
+    </div>
   );
 };
 
