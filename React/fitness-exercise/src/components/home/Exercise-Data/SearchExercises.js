@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SliderExercise from "./SliderExercise";
 // import { exerciseOptions, fetchData } from "../utils/Data";
 
-const SearchExercises = ({ setSearchData, searchData }) => {
+const SearchExercises = ({
+  setSearchData,
+  searchData,
+  bodyPart,
+  setBodyPart,
+}) => {
   // const [searchData, setSearchData] = useState("");
 
   return (
@@ -17,7 +22,7 @@ const SearchExercises = ({ setSearchData, searchData }) => {
             className="bg-slate-600 text-white p-2 rounded-tl-md rounded-bl-md w-[80%]  focus:outline-none"
             placeholder="search..."
             value={searchData}
-            onChange={(e) => setSearchData(e.target.value.toLowerCase())}
+            onChange={(e) => setSearchData(e.target.value)}
           />
           <button
             className="border border-amber-600 px-5 py-[7px] rounded-tr-md rounded-br-md hover:bg-amber-600 hover:text-white"
@@ -26,7 +31,7 @@ const SearchExercises = ({ setSearchData, searchData }) => {
             Search
           </button>
         </div>
-        <SliderExercise />
+        <SliderExercise bodyPart={bodyPart} setBodyPart={setBodyPart} />
       </div>
     </div>
   );

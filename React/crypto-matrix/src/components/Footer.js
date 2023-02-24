@@ -3,7 +3,7 @@ import Logo from "../assets/Bitfinex-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="mt-2 p-4 bg-slate-200">
+    <footer className="mt-2 p-4 bg-black">
       <div className="flex gap-4 sm:ml-10">
         <img src={Logo} className="h-7 sm:h-10  object-cover" />
         <h1 className=" text-[#fdd141] cursor-pointer text-base sm:text-2xl font-bold">

@@ -1,17 +1,24 @@
-// export const exerciseOptions = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "aa6ad99f13mshf0e6f28b0d76202p12ec32jsn7211b353d79a",
-//     "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
-//   },
-// };
+export const exerciseOptions = {
+  method: "GET",
+  // params: { muscle: "biceps" },
+  headers: {
+    "X-RapidAPI-Key": "aa6ad99f13mshf0e6f28b0d76202p12ec32jsn7211b353d79a",
+    "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
+  },
+};
 
-// export const fetchData = async (url, options) => {
-//   const res = await fetch(url, options);
-//   const data = await res.json();
-//   return data;
-// };
+export const fetchData = async (url, options) => {
+  const res = await fetch(url, options);
+  const data = await res.json();
+  return data;
+};
+
 export const exerciseData = [
+  {
+    name: "all",
+    image:
+      "https://www.aleanlife.com/wp-content/uploads/2020/11/arm-workout-with-dumbbells-at-home-490x207.jpg",
+  },
   {
     name: "back",
     image:
@@ -65,6 +72,32 @@ export const exerciseData = [
 ];
 
 export const fullExerciseData = [
+  {
+    id: "53",
+    name: "band fixed back close grip pulldown",
+    bodyPart: "back",
+    muscleTarget: "lats",
+    equipmentUsed: "band",
+    image: "https://cdn.exowatts.com/images/exercises/53.gif",
+  },
+
+  {
+    id: "1234",
+    name: "stalder press",
+    bodyPart: "upper-arms",
+    muscleTarget: "triceps",
+    equipmentUsed: "body-weight",
+    image: "https://cdn.exowatts.com/images/exercises/1234.gif",
+  },
+
+  {
+    id: "724",
+    name: "dumbbell standing reverse curl",
+    bodyPart: "upper-arms",
+    muscleTarget: "biceps",
+    equipmentUsed: "dumbbell",
+    image: "https://cdn.exowatts.com/images/exercises/724.gif",
+  },
   {
     id: "53",
     name: "band fixed back close grip pulldown",

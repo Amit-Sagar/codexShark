@@ -6,16 +6,23 @@ import TopBanner from "../components/home/TopBanner";
 const HomePage = () => {
   const [searchData, setSearchData] = useState("");
   const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState("All");
 
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <TopBanner />
-      <SearchExercises searchData={searchData} setSearchData={setSearchData} />
+      <SearchExercises
+        bodyPart={bodyPart}
+        setBodyPart={setBodyPart}
+        searchData={searchData}
+        setSearchData={setSearchData}
+      />
       <Exercises
         exercises={exercises}
         searchData={searchData}
         setSearchData={setSearchData}
         setExercises={setExercises}
+        bodyPart={bodyPart}
       />
     </div>
   );

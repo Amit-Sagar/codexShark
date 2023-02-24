@@ -10,10 +10,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <div className="w-11/12 mx-auto ">
+        {/* <div className="w-11/12 mx-auto bg-Image"> */}
+        <div>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/exercise/:id" element={<ExerciseDetail />} />
+            <Route path="/exercise" element={<ExerciseDetail />} />
           </Routes>
         </div>
         <Footer />

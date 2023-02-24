@@ -2,25 +2,25 @@ import React, { useEffect, useState } from "react";
 import { exerciseData } from "../../utils/Data";
 import AliceCarousel from "react-alice-carousel";
 
-const SliderExercise = () => {
+const SliderExercise = ({ bodyPart, setBodyPart }) => {
   const [sliderExercise, setSliderExercise] = useState([]);
-  const [bodyPart, setBodyPart] = useState("All");
+  // const [bodyParts, setBodyParts] = useState([])
 
   useEffect(() => {
     const fetchData = () => {
       setSliderExercise(exerciseData);
     };
+    // setSliderExercise([{ name: "all" }, ...sliderExercise]);
     fetchData();
   }, [sliderExercise]);
-  console.log(sliderExercise);
 
   const items = sliderExercise.map((data) => {
     return (
       <div
         className={`flex flex-col items-center cursor-pointer  hover:shadow-lg hover:shadow-slate-400 p-4 ${
-          bodyPart === data && "border-t-green-600 border-t-2"
+          bodyPart === data.name && "border-t-green-600 border-t-2"
         }`}
-        onClick={() => setBodyPart(data)}
+        onClick={() => setBodyPart(data.name)}
       >
         <img
           src={data.image}

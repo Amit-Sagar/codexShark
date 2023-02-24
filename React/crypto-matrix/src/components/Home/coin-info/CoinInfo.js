@@ -24,7 +24,7 @@ const CoinInfo = () => {
   }, [currency]);
 
   return (
-    <div className="flex flex-col-reverse md:flex-row w-3/4 md:w-[95%] mx-auto mt-6 py-4">
+    <div className="flex flex-col-reverse md:flex-row w-3/4 md:w-[95%] mx-auto mt-20 py-4">
       <div className="md:w-1/3 mt-10 md:mt-0 p-2">
         {loading ? (
           <div className=" p-4 max-w-sm w-full mt-10">
