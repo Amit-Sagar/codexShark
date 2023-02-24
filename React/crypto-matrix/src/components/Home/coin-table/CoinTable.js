@@ -37,7 +37,7 @@ const CoinTable = () => {
           <input
             type="search"
             className="pl-2 border rounded-lg w-full py-2 mt-3 bg-black"
-            placeholder="search your favourite crypto"
+            placeholder="search..."
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>

@@ -15,7 +15,7 @@ const Table = ({ onHandleSearch }) => {
             <td
               key={head}
               className={`text-black font-bold ${
-                head === "Coin" ? "ml-10" : ""
+                head === "Coin" ? "pl-5 sm:pl-10 md:pl-20" : ""
               }`}
             >
               {head}
@@ -28,15 +28,15 @@ const Table = ({ onHandleSearch }) => {
           const profit = item.price_change_percentage_24h > 0;
           return (
             <tr
-              className="bg-[#16171a] text-sm md:text-base cursor-pointer hover:bg-[#131111]"
+              className="bg-[#16171a] text-xs md:text-base cursor-pointer hover:bg-[#131111] "
               key={item.name}
               onClick={() => navigate(`/coins/${item.id}`)}
             >
-              <td className="flex gap-4">
+              <td className="flex gap-4 ml-2 sm:ml-5 md:ml-10">
                 <img
                   src={item?.image}
                   alt={item.name}
-                  className="h-5 md:h-14 md:m-3 my-3"
+                  className="h-5 sm:h-8 md:h-14 md:m-3 my-3"
                 />
                 <div className="flex flex-col justify-center">
                   <span className="uppercase text-base sm:text-lg md:text-xl">
@@ -46,7 +46,7 @@ const Table = ({ onHandleSearch }) => {
                 </div>
               </td>
               <td className="text-sm">
-                {symbol} {numberWithCommas(item.current_price.toFixed(4))}
+                {symbol} {numberWithCommas(item.current_price.toFixed(3))}
               </td>
               <td
                 className={`${

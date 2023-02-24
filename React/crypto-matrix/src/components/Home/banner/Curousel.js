@@ -52,9 +52,15 @@ const Curousel = () => {
 
   const responsive = {
     0: {
+      items: 1,
+    },
+    400: {
       items: 2,
     },
-    512: {
+    648: {
+      items: 3,
+    },
+    850: {
       items: 4,
     },
   };
