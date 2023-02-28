@@ -1,29 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { weatherData } from "../../store/WeaterAction";
 
 const Weather = () => {
-  const options = {
-    method: "GET",
-    params: { lat: "35.5", lon: "-78.5" },
-    headers: {
-      "X-RapidAPI-Key": "aa6ad99f13mshf0e6f28b0d76202p12ec32jsn7211b353d79a",
-      "X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com",
-    },
+  const [weather, setWeather] = useState("Ramnagar");
+  const data = useSelector((state) => state.weatherReducer);
+  console.log("weather data ", data);
+  const dispatch = useDispatch();
+
+  const getWeatherData = () => {
+    dispatch(weatherData(weather));
+    setWeather("");
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly",
-        options
-      );
-      const data = await res.json();
-      console.log(data);
-    };
-
-    fetchData();
-  }, []);
-
-  return <div>Weather</div>;
+  return (
+    <div className="w-4/5 mx-auto mt-10 bg-slate-400">
+      <div className="flex w-full ">
+        <input
+          type="search"
+          placeholder="search..."
+          className="w-4/5 py-2 px-1"
+          value={weather}
+          onChange={(e) => setWeather(e.target.value)}
+        />
+        <button onClick={getWeatherData} className="rounded-r-lg">
+          Search
+        </button>
+      </div>
+      <div>
+        {data.name}
+        {/* {data.map((item) => {
+          return <h1>{item.name}</h1>;
+        })} */}
+      </div>
+    </div>
+  );
 };
 
 export default Weather;
