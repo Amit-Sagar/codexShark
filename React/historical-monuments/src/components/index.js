@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { historicalMonuments } from "../Data";
+import React from "react";
 import HistoricalData from "./historical-data/HistoricalData";
-// import MonumentsMap from "./MonumentsMap";
 
 const Monuments = () => {
   return (
     <div>
-      {/* <MonumentsMap monumentData={monumentData} /> */}
+      <h1 className="text-3xl text-rose-900 p-2 ml-14 underline">
+        Monuments of India
+      </h1>
       <HistoricalData />
     </div>
   );

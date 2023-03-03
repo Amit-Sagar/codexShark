@@ -11,7 +11,7 @@ export const historicalMonuments = [
   },
   {
     id: 2,
-    title: " Jama Masjid",
+    title: "Jama Masjid",
     long_lat: [28.651, 77.234],
     description:
       "The Jama Masjid is India’s largest mosque. With minarets on all four sides that reach the skies, Jama Masjid, Emperor Shah Jahan’s last architectural indulgence, was commissioned in 1650 and took six years to be built. The enormous courtyard of the Jama Masjid can hold around twenty-five thousand worshippers.The main prayer hall has a beautiful white ceiling and the entrance is decorated with high rising arches. There is a pool right in heart of the mosque that is used by the faithful for cleansings before prayer.",
@@ -89,12 +89,54 @@ export const historicalMonuments = [
       "https://static-blog.treebo.com/wp-content/uploads/2018/03/India-Gate-was-unveiled-in-1933-.jpg",
     url: "https://en.wikipedia.org/wiki/Alai_Darwaza",
   },
-  // {
-  //   id: 1,
-  //   title: "India Gate",
-  //   description:
-  //     "Situated in the heart of the city, India Gate is one of the most popular and well known monuments in India. It was designed by Edwin Lutyens. With lush green and well-manicured lawns around, the foundation of this historical structure was laid in 1920.It was unveiled in 1933 and dedicated to all the Indian soldiers of the British Army that were killed in World War I.",
-  //   image:
-  //     "https://static-blog.treebo.com/wp-content/uploads/2018/03/India-Gate-was-unveiled-in-1933-.jpg",
-  // },
+  {
+    id: 10,
+    title: "Taj Mahal",
+    long_lat: [27.171165982, 78.038666512],
+    description:
+      "Shah Jahan built the Taj Mahal in Agra, where he took the throne in 1628. First conquered by Muslim invaders in the eleventh century, the city had been transformed into a flourishing area of trade during Shah Jahan’s rule. Situated on the banks of the Yamuna River allowed for easy access to water, and Agra soon earned the reputation as a “riverfront garden city,” on account of its meticulously planned gardens, lush with flowering bushes and fruit-bearing trees in the sixteenth century.",
+    image:
+      "https://cdn.kastatic.org/ka-perseus-images/a79b0ada35d989ee1937f865c2216ce50a1b1b33.jpg",
+    url: "https://www.tajmahal.gov.in/",
+  },
+  {
+    id: 11,
+    title: "Golden Temple",
+    long_lat: [31.618664192, 74.872829842],
+    description:
+      "One of the most spiritual places in India, the Golden Temple, also known as Sri Harmandir Sahib, is the holiest shrine in all of Sikhism. Located right in the heart of Amritsar, the stunning golden architecture of the temple and the daily Langar (community kitchen) attract a large number of visitors and devotees each day. The temple is open to devotees of all faiths and serves over 100,000 people free food from all walks of life.The main Temple housing the shrine is a small part of the vast complex known as Harmandir Sahib or Darbar Sahib to the Sikhs. The spiritual focus is the tank, the Amrit Sarovar, which surrounds the glistening central shrine. ",
+    image:
+      "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_479585620_20191024174904_20200407155734.jpg",
+    url: "https://en.wikipedia.org/wiki/Golden_Temple",
+  },
+  {
+    id: 12,
+    title: "The Brihadisvara Temple(Thanjavur)",
+    long_lat: [10.8, 79.15],
+    description:
+      "A Hindu temple, dedicated to Shiva is located in Thanjavur, Tamil Nadu, India, Brihadisvara Temple was built between 1003 and 1010 AD by Raja Raja Chola I. It is one of the largest temples in South India located 350 kilometres southwest of the city of Chennai. The place is well connected by bus and train facility. If you want to fly for a quick weekend getaway, then the nearest airport, Tiruchirappalli International Airport is 55 kilometres away.More than 1000 years old, this Chola Temple is the majestic work of the architect Kunjara Mallan Raja Raja Perumthachan. ",
+    image:
+      "https://www.holidify.com/images/cmsuploads/compressed/BrihadishwaraTemple_20180314111033.jpg",
+    url: "https://en.wikipedia.org/wiki/Golden_Temple",
+  },
+  {
+    id: 13,
+    title: "Hawa Mahal",
+    long_lat: [26.920996316, 75.822663376],
+    description:
+      "The massive edifice of Hawa Mahal stands at the intersection of the main road in Jaipur, Badi Chaupad and was built by Maharaja Sawai Pratap Singh in the year 1799. Hawa Mahal derives its name from its unique structure, which is a mesh of small windows that allowed cool wind to enter the palace and hence kept the palace comfortable during the hot summer months. The main reason behind the palace's construction was to allow the women of the royal house to observe the festivities on the streets whilst being unseen from the outside as was the custom of the land. It is located right on the edge of the City Palace Jaipur and extends right to the 'zenana'.",
+    image:
+      "https://www.holidify.com/images/cmsuploads/compressed/h4_20170822181427.PNG",
+    url: "https://en.wikipedia.org/wiki/Hawa_Mahal",
+  },
+  {
+    id: 14,
+    title: "Victoria Memorial",
+    long_lat: [22.5449, 88.3425],
+    description:
+      "Another relic of the British Raj in India, the Victoria Memorial is located in the heart of Kolkata, in West Bengal. This white marbled opulent structure was built in memory of Queen Victoria to celebrate her 25 years of rule over India and is almost a replica of the Victoria Memorial in London. Victoria Memorial is an iconic structure that is synonymous with the city of joy.The memorial is surrounded by a lush green and well-maintained garden, which spreads over 64 acres and has numerous statues and sculptures in it. A sixteen-foot tall bronze statue of victory, mounted on ball bearings at the top of the memorial.",
+    image:
+      "https://www.holidify.com/images/cmsuploads/compressed/attr_1884_20190329150438.jpg",
+    url: "https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata",
+  },
 ];

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const MonumentsMap = ({ monumentLong, monumentName }) => {
-  console.log(`long and lat ${monumentLong}`);
+  console.log(`${monumentName} ${monumentLong}`);
   return (
-    <div className="w-[40%] px-5 pt-10">
+    <div className="w-[40%] px-5">
       <MapContainer
         // key={data.id}
         center={monumentLong}
