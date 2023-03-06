@@ -10,17 +10,20 @@ const HistoricalData = () => {
   const [monumentData, setMonumentData] = useState([]);
   const [slideId, setSlideId] = useState(0);
 
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
+
   const getNextData = (id) => {
     console.log(id);
     if (slideId < historicalMonuments.length - 1) {
-      setSlideId(slideId + 1);
+      navigationNextRef.current.onclick = setSlideId(slideId + 1);
     } else {
       setSlideId(0);
     }
   };
   const getPrevData = () => {
     if (slideId > 0) {
-      setSlideId(slideId - 1);
+      navigationPrevRef.current.onclick = setSlideId(slideId - 1);
     } else {
       setSlideId(historicalMonuments.length - 1);
     }
@@ -41,8 +44,8 @@ const HistoricalData = () => {
           initialSlide={slideId}
           modules={[Navigation]}
           navigation={{
-            prevEl: ".prevSwiper",
-            nextEl: ".nextSwiper",
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
           }}
           loop={true}
           slidesPerView={1}
@@ -51,34 +54,38 @@ const HistoricalData = () => {
           {monumentData.map((data) => {
             return (
               <SwiperSlide key={data.id}>
-                <div>
-                  <a href={data.url} target="_blank">
-                    <div className="bg-cyan-50 px-10 cursor-pointer active:scale-95 card">
-                      <h1 className="text-emerald-900 text-3xl my-2">
-                        {data.title}
-                      </h1>
-                      <img src={data.image} alt="" />
-                      <p className="py-2">{data.description}</p>
-                    </div>
-                  </a>
-                </div>
-                <div className="flex justify-center gap-4">
-                  <button
-                    className="prevSwiper rounded-md border-2 border-cyan-900 px-4 py-1 hover:bg-cyan-900 hover:text-white active:scale-95"
-                    onClick={() => getPrevData(data)}
-                  >
-                    Prev
-                  </button>
-                  <button
-                    className="nextSwiper rounded-md border-2 border-cyan-900 px-4 py-1 hover:bg-cyan-900 hover:text-white active:scale-95"
-                    onClick={() => getNextData(data)}
-                  >
-                    Next
-                  </button>
-                </div>
+                <a href={data.url} target="_blank">
+                  <div className="bg-cyan-50 px-10 cursor-pointer active:scale-95 card">
+                    <h1 className="text-emerald-900 text-3xl my-2 font-[karla]">
+                      {data.title}
+                    </h1>
+                    <img
+                      src={data.image}
+                      alt="Monument Image"
+                      className="w-[40%]"
+                    />
+                    <p className="py-2">{data.description}</p>
+                  </div>
+                </a>
               </SwiperSlide>
             );
           })}
+          <div className="flex justify-center gap-4">
+            <div
+              ref={navigationPrevRef}
+              onClick={getPrevData}
+              className="rounded-md border-2 border-cyan-900 px-4 py-1 hover:bg-cyan-900 hover:text-white active:scale-95 cursor-pointer"
+            >
+              Prev
+            </div>
+            <div
+              ref={navigationNextRef}
+              onClick={getNextData}
+              className="rounded-md border-2 border-cyan-900 px-4 py-1 hover:bg-cyan-900 hover:text-white active:scale-95 cursor-pointer"
+            >
+              Next
+            </div>
+          </div>
         </Swiper>
       </div>
     </div>

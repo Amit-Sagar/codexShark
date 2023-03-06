@@ -139,4 +139,14 @@ export const historicalMonuments = [
       "https://www.holidify.com/images/cmsuploads/compressed/attr_1884_20190329150438.jpg",
     url: "https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata",
   },
+  {
+    id: 15,
+    title: "Ajanta and Ellora Caves",
+    long_lat: [20.552377, 75.700436],
+    description:
+      "Ajanta and Ellora caves, considered to be one of the finest examples of ancient rock-cut caves, are located near Aurangabad in Maharashtra, India. Ajanta and Ellora caves complex is adorned with beautiful sculptures, paintings, and frescoes and include Buddhist monasteries, Hindu and Jain temples. The Ajanta caves are 29 in number and were built between the 2nd century BC and 6th century AD, whereas the Ellora Caves are more spread out and 34 in number and dates to the period between 6th and 11th Century AD.Ajanta and Ellora caves are designated as UNESCO World Heritage Sites and are quite popular among travelers worldwide. Ajanta Caves, located around 99km north of Aurangabad, are mostly Buddhist sites and were used as a retreat by Buddhist Monks. Ellora is just 15 km west of Aurangabad and has a better mix of Hindu, Jain, and Buddhist sites.",
+    image:
+      "https://www.holidify.com/images/bgImages/AJANTA-AND-ELLORA-CAVES.jpg",
+    url: "https://en.wikipedia.org/wiki/Ajanta_Caves",
+  },
 ];

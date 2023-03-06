@@ -1,4 +1,4 @@
-/* .swiper-button-prev,
+.swiper-button-prev,
 .swiper-button-next {
   position: absolute;
   box-shadow: 0 0 2px rgb(174, 170, 170);
@@ -6,6 +6,8 @@
   background-color: white;
   padding: 35px 15px;
   cursor: pointer;
+  /* margin-bottom: 200px; */
+  /* bottom: 500px; */
 }
 .swiper-button-next {
   border-radius: 0 5px 5px 0;
@@ -24,7 +26,7 @@
 .swiper-button-prev:active,
 .swiper-button-next:active {
   transform: scaleX(0.5);
-} */
+}
 /* .card:hover {
   box-shadow: 10px 0 10px black;
 } */
