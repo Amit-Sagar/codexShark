@@ -10,12 +10,12 @@ const Greeting = (props: GreetingProps) => {
     <div>
       {props.isLoggedIn ? (
         <div>
-          <h1>
+          <h4>
             Hey! {props.name}, You have {props.messageCount} new messages.{" "}
-          </h1>
+          </h4>
         </div>
       ) : (
-        <h1>Welcome Guest</h1>
+        <h4>Welcome Guest</h4>
       )}
     </div>
   );
