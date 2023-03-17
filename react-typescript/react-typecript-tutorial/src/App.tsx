@@ -1,7 +1,11 @@
 import "./App.css";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
+import { ClassCounter } from "./components/class/ClassCounter";
 import Container_Style from "./components/Container_Style";
 import Button from "./components/events/Button";
 import Input from "./components/events/Input";
+import List from "./components/generic/List";
 import Box from "./components/hooks/useContextHook/ThemeContext/Box";
 import { ThemeContextProvider } from "./components/hooks/useContextHook/ThemeContext/ThemeContext";
 import User from "./components/hooks/useContextHook/userContext/User";
@@ -78,6 +82,19 @@ function App() {
       </UserContextProvider>
       <DomRef />
       <ManipulateRef />
+      <hr />
+      <h1 className="text-3xl mt-4">*****Class*****</h1>
+      <ClassCounter message="Counter: " />
+      <hr />
+      <h1 className="text-3xl mt-4">*****Component Prop*****</h1>
+      <Private isLoggedin={true} Component={Profile} />
+      <hr />
+      <h1 className="text-3xl mt-4">*****Generic Props*****</h1>
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3, 4]} onClick={(item) => console.log(item)} />
     </div>
   );
 }
