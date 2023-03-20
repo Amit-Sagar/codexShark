@@ -21,6 +21,11 @@ import Oscar from "./components/props/Oscar";
 import Person from "./components/props/Person";
 import PersonList from "./components/props/PersonList";
 import Status from "./components/props/Status";
+import ResrictingProps from "./components/restriciting-props/ResrictingProps";
+import Toast from "./components/template-literals/Toast";
+import CustomButton from "./components/wrapping-html-element/CustomButton";
+import CustomComponent from "./components/wrapping-html-element/CustomComponent";
+import CustomInput from "./components/wrapping-html-element/CustomInput";
 
 function App() {
   const personName = {
@@ -95,6 +100,22 @@ function App() {
         onClick={(item) => console.log(item)}
       />
       <List items={[1, 2, 3, 4]} onClick={(item) => console.log(item)} />
+      <hr />
+      <h1 className="text-3xl mt-4">*****Restricing Props*****</h1>
+      <ResrictingProps value={10} isPositive />
+      <hr />
+      <h1 className="text-3xl mt-4">Toast Props</h1>
+      <Toast position="left-bottom" />
+      <hr />
+      <h1 className="text-3xl mt-4">*****Wrapping HTML Element*****</h1>
+      <CustomButton
+        variant="secondary"
+        onClick={() => console.log("Button Clicked")}
+      >
+        Primary Button
+      </CustomButton>
+      <CustomInput />
+      <CustomComponent name="Faizan" messageCount={10} isLoggedIn />
     </div>
   );
 }
