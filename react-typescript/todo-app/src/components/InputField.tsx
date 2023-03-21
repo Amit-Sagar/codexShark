@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import '../styles/style.css'
+import "../styles/style.css";
 
 interface props {
   todo: string;
@@ -20,7 +20,7 @@ const InputFeild: React.FC<props> = ({ todo, setTodo, handleAdd }) => {
     >
       <input
         type="text"
-        placeholder="Enter a Todo"
+        placeholder="Type..."
         value={todo}
         ref={inputRef}
         onChange={(e) => setTodo(e.target.value)}
