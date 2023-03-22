@@ -1,26 +1,40 @@
-import "./App.css";
-import { Button } from "react-bootstrap";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/login";
-import Register from "./components/Register";
-import AddProduct from "./components/AddProduct";
-import UpdateProduct from "./components/UpdateProducts";
-import Protected from "./components/Protected";
-import Home from "./components/Home";
+import React, { useState, useEffect } from "react";
+
+import Login from "./components/login/Login";
+import Home from "./components/Home/Home";
+import MainHeader from "./components/MainHeader/MainHeader";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
+
+    if (storedUserLoggedInInformation === "1") {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const loginHandler = (email, password) => {
+    // We should of course check email and password
+    // But it's just a dummy/ demo anyways
+    localStorage.setItem("isLoggedIn", "1");
+    setIsLoggedIn(true);
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem("isLoggedIn");
+    setIsLoggedIn(false);
+  };
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/add" element={<Protected Cmp={AddProduct} />} />
-          <Route path="/update" element={<Protected Cmp={UpdateProduct} />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <React.Fragment>
+      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+      <main>
+        {!isLoggedIn && <Login onLogin={loginHandler} />}
+        {isLoggedIn && <Home onLogout={logoutHandler} />}
+      </main>
+    </React.Fragment>
   );
 }
 
