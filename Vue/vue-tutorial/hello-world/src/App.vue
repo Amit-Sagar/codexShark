@@ -55,10 +55,32 @@
     <div v-bind:style="[baseStyleObject, successStyleObject]">
       Array Style Success
     </div>
+    <ShortHand />
+    <h1>Conditionl Rendering</h1>
+    <conditional-rendering />
+    <h1>List Rendering</h1>
+    <ListRendering />
+    <ConditionalListRendering />
+    <h1>Methods</h1>
+    <UsefulMethod />
+    <h1>Event Handling</h1>
+    <EventHandling />
+    <short-hand-event-handling />
+    <h1>Form Handling</h1>
+    <FormHandling />
   </div>
 </template>
 
 <script>
+import ConditionalListRendering from "./components/ConditionalListRendering.vue";
+import ConditionalRendering from "./components/ConditionalRendering.vue";
+import EventHandling from "./components/EventHandling.vue";
+import FormHandling from "./components/FormHandling.vue";
+import ListRendering from "./components/ListRendering.vue";
+import ShortHand from "./components/ShortHand.vue";
+import ShortHandEventHandling from "./components/ShortHandEventHandling.vue";
+import UsefulMethod from "./components/UsefulMethod.vue";
+
 export default {
   name: "App",
   data() {
@@ -93,9 +115,18 @@ export default {
       },
     };
   },
+  components: {
+    ShortHand,
+    ConditionalRendering,
+    ListRendering,
+    ConditionalListRendering,
+    UsefulMethod,
+    EventHandling,
+    ShortHandEventHandling,
+    FormHandling,
+  },
 };
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -116,5 +147,29 @@ export default {
 }
 .new {
   color: green;
+}
+label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 5px;
+}
+input + label {
+  font-weight: bold;
+  display: inline-flex;
+  margin-right: 20px;
+}
+input[type="text"],
+textarea,
+select {
+  display: block;
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 </style>
